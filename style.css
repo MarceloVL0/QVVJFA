@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif ;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #4c0c0a;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+    padding-right: 80px;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+/* Seção de apresentação */
+
+
+#presentation{
+    background-image: url(./background.gif);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    color: #9c453f;
+}
+
+#presentation h1{
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(1){
+    animation-delay: .8s;
+}
+
+#presentation h1:nth-child(2){
+    animation-delay: 1.8s;
+}
+
+#presentation h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 2.8s;
+}
+
+#presentation .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #a7726f;
+    background-color: transparent;
+    border: 4px solid #a7726f;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+
+
+#presentation .cta:hover{
+    color: white;
+    background-color: #a7726f;
+}
+
+#presentation h1 span{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+    background-color: #a7726f;
+}
+
+#presentation h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+
+#presentation h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+/* Seção de Portifólio */
+
+#lista {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#portfolio .project-img{
+    flex-basis: 100%;
+    position: relative;
+    text-align : center;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #a26b69;
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+a:hover{
+    color: #9e443c;
+}
+
+a:active{
+    color: #9e443c;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: #9c453f;
+    text-align: center;
+    font-size: 20px;
+    color: #4c0c0a;
+}
+
+/* Keyframes */
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: #a26b69;
+        font-weight: 600px;
+    }
+}
+
+@keyframes text_reveal_box{
+    50%{
+        width:100%;
+        left:0;
+    }
+    100%{
+        width: 0;
+        left:100%
+    }
+}
